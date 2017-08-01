@@ -1,0 +1,2 @@
+# PoshModule
+PowerShell Module template
