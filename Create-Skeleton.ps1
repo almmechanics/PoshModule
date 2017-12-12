@@ -1,4 +1,6 @@
-﻿function Create-Skeleton
+Set-StrictMode -Version latest
+
+function Create-Skeleton
 {
 <#
 .Example
@@ -27,5 +29,5 @@ Create-Skeleton -RootFolder c:\dev\mod1 -ModuleName 'demo'
         "`$interfacePath = Join-Path `$cmdletsPath 'interface'",
         "# . (Join-Path `$interfacePath '<interface_sample>.ps1')",        
         "`$internalPath = Join-Path `$cmdletsPath 'internal'",
-        "# . (Join-Path `$interfacePath '<internal_sample>.ps1')") | out-file "$RootFolder\$ModuleName\$ModuleName.psm1" -Encoding ascii -Force
+        "# . (Join-Path `$internalPath '<internal_sample>.ps1')") | out-file "$RootFolder\$ModuleName\$ModuleName.psm1" -Encoding ascii -Force
 }
