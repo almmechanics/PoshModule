@@ -9,8 +9,11 @@ Create-Skeleton -RootFolder c:\dev\mod1 -ModuleName 'demo'
     [CmdletBinding()]
     param
     (
+        [Parameter(Mandatory)]
+        [ValidateScript({Test-Path $_})]
         [string]
         $RootFolder,
+        [Parameter(Mandatory)]
         [string]
         $ModuleName
     )
