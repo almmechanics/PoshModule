@@ -1,3 +1,4 @@
+
 language: generic
 
 matrix:
@@ -8,6 +9,7 @@ matrix:
         - brew update
         - brew tap caskroom/cask
         - brew cask install powershell
+        - brew cask install pester
     - os: linux
       dist: trusty
       # VM-based builds turned out to be faster
@@ -21,4 +23,4 @@ matrix:
             - powershell
 
 script:
-  - pwsh -c 'Import-Module ./PoshModule.psd1; Invoke-Pester -ExcludeTag VersionChecks, StyleRules, Help -EnableExit'
+  - pwsh -c 'Import-Module Pester.psd1; Import-Module ./PoshModule.psd1; Invoke-Pester -ExcludeTag VersionChecks, StyleRules, Help -EnableExit'
