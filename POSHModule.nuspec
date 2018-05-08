@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>POSHModule</id>
+    <version>1.0.0</version>
+    <authors>ALM Mechanics</authors>
+    <owners>ALM Mechanics</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Creates a defined shapre for powershell modules</description>
+    <copyright>Copyright 2018</copyright>
+    <tags>PowerShell Module</tags>
+  </metadata>
+</package>
